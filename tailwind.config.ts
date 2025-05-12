@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				neon: {
+					red: "#ff2a6d",
+					cyan: "#05d9e8",
+					purple: "#9b87f5",
+				},
+				cyber: {
+					dark: "#121212",
+					darker: "#0a0a0a",
+					light: "#333333",
+					muted: "#555555",
 				}
+			},
+			fontFamily: {
+				orbitron: ['Orbitron', 'sans-serif'],
+				rajdhani: ['Rajdhani', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,26 +76,51 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1', 
+						boxShadow: '0 0 5px theme("colors.neon.red"), 0 0 10px theme("colors.neon.red")'
 					},
-					to: {
-						height: '0'
-					}
+					'50%': { 
+						opacity: '0.8', 
+						boxShadow: '0 0 20px theme("colors.neon.red"), 0 0 30px theme("colors.neon.red")'
+					},
+				},
+				'text-glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px theme("colors.neon.cyan"), 0 0 10px theme("colors.neon.cyan")'
+					},
+					'50%': { 
+						textShadow: '0 0 20px theme("colors.neon.cyan"), 0 0 30px theme("colors.neon.cyan")'
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'text-glow': 'text-glow 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'cyber-grid': 'linear-gradient(rgba(5, 217, 232, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(5, 217, 232, 0.1) 1px, transparent 1px)',
+				'hero-pattern': 'url("/public/lovable-uploads/0eb2d7be-10f4-49ae-908e-08dd0d9fee9b.png")',
+			},
+			backdropFilter: {
+				'none': 'none',
+				'blur': 'blur(20px)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
