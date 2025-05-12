@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ParticlesBackground from '../components/ParticlesBackground';
-import { Circuit, Code, Cpu, Database, Fingerprint, Monitor } from 'lucide-react';
+import { CircuitBoard, Code, Cpu, Database, Fingerprint, Monitor } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
@@ -118,7 +118,7 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-cyber-dark border border-neon-cyan p-3 rounded-lg">
-                <Circuit className="h-10 w-10 text-neon-cyan animate-pulse" />
+                <CircuitBoard className="h-10 w-10 text-neon-cyan animate-pulse" />
               </div>
             </motion.div>
           </div>

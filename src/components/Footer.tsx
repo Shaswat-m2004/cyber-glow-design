@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Circuit, 
+  CircuitBoard, 
   Github, 
   Twitter, 
   Linkedin, 
@@ -20,7 +19,7 @@ const Footer = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 group">
-              <Circuit className="text-neon-cyan h-8 w-8" />
+              <CircuitBoard className="text-neon-cyan h-8 w-8" />
               <span className="font-orbitron text-xl font-bold tracking-wider">
                 REBORN<span className="text-neon-red">.</span>
               </span>

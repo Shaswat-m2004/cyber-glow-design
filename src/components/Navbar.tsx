@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Circuit, Menu, X } from 'lucide-react';
+import { CircuitBoard, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group" onClick={closeMenu}>
-          <Circuit className="text-neon-cyan h-8 w-8 group-hover:animate-spin-slow" />
+          <CircuitBoard className="text-neon-cyan h-8 w-8 group-hover:animate-spin-slow" />
           <span className="font-orbitron text-xl font-bold tracking-wider group-hover:neon-text-cyan">
             REBORN<span className="text-neon-red">.</span>
           </span>

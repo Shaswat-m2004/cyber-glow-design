@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Circuit, Home } from 'lucide-react';
+import { CircuitBoard, Home } from 'lucide-react';
 
 const NotFound = () => {
   const location = useLocation();
@@ -27,7 +27,7 @@ const NotFound = () => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <Circuit className="h-20 w-20 text-neon-red mx-auto" />
+          <CircuitBoard className="h-20 w-20 text-neon-red mx-auto" />
         </motion.div>
         
         <motion.h1
