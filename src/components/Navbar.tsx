@@ -33,12 +33,11 @@ const Navbar = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen 
-          ? 'bg-cyber-dark/90 backdrop-blur-md border-b border-neon-cyan/30' 
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMenuOpen
+          ? 'bg-cyber-dark/90 backdrop-blur-md border-b border-neon-cyan/30'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group" onClick={closeMenu}>
@@ -54,15 +53,14 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`font-rajdhani text-base font-semibold tracking-wider transition duration-300 hover:text-neon-cyan ${
-                location.pathname === link.path ? 'text-neon-cyan' : 'text-white'
-              }`}
+              className={`font-rajdhani text-base font-semibold tracking-wider transition duration-300 hover:text-neon-cyan ${location.pathname === link.path ? 'text-neon-cyan' : 'text-white'
+                }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="cyber-button text-white"
           >
             Connect
@@ -85,22 +83,21 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-cyber-darker/95 backdrop-blur-md z-40 flex flex-col justify-center items-center">
-          <nav className="flex flex-col items-center space-y-6 p-8">
+        <div className="md:hidden fixed inset-0 bg-cyber-darker/95 backdrop-blur-md z-40 flex flex-col items-center overflow-y-auto min-h-screen py-12 px-6">
+          <nav className="flex flex-col items-center space-y-6 w-full">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-orbitron text-xl font-medium tracking-wider transition duration-300 hover:text-neon-cyan ${
-                  location.pathname === link.path ? 'text-neon-cyan' : 'text-white'
-                }`}
+                className={`font-orbitron text-xl font-medium tracking-wider transition duration-300 hover:text-neon-cyan ${location.pathname === link.path ? 'text-neon-cyan' : 'text-white'
+                  }`}
                 onClick={closeMenu}
               >
                 {link.name}
               </Link>
             ))}
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="cyber-button text-white mt-4"
               onClick={closeMenu}
             >
@@ -109,6 +106,7 @@ const Navbar = () => {
           </nav>
         </div>
       )}
+
     </header>
   );
 };
